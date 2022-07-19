@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<MVCDb.Models.Dept>
 <h1>Department Listing</h1>
 <hr />
+@Html.ActionLink("Add Department", "Create")
+
 <table>
     <thead>
         <tr>
@@ -16,6 +18,12 @@
                 <td>@Html.DisplayFor(d => data.Id)</td>
                 <td>@Html.DisplayFor(d => data.Name)</td>
                 <td>@Html.DisplayFor(d => data.Location)</td>
+                <td></td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = data.Id })&nbsp;&nbsp;&nbsp;&nbsp;
+                    @Html.ActionLink("Edit", "Edit", new { id = data.Id })&nbsp;&nbsp;&nbsp;&nbsp;
+                    @Html.ActionLink("Delete", "Delete", new { id = data.Id })&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
             </tr>
             }
     </tbody>
