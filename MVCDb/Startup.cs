@@ -9,7 +9,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using MVCDb.Models;
 using Microsoft.Extensions.Configuration;
-using MVCDb.models;
 using Microsoft.EntityFrameworkCore;
 
 

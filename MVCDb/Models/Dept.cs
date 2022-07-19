@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace MVCDb.models
+namespace MVCDb.Models
 {
     public partial class Dept
     {

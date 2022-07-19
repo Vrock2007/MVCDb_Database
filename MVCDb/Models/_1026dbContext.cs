@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace MVCDb.models
+namespace MVCDb.Models
 {
     public partial class _1026dbContext : DbContext
     {
