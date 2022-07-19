@@ -18,5 +18,10 @@ namespace MVCDb.Controllers
         {
             return View(repos.GetDepts().ToList());
         }
+        public IActionResult Details(int id)
+        {
+            var data = repos.Find(id);
+            return View(data);
+        }
     }
 }

@@ -29,7 +29,8 @@ namespace MVCDb.Models
 
         public Dept Find(int id)
         {
-            throw new NotImplementedException();
+            Dept dept = context.Depts.Find(id);
+            return dept;
         }
 
         public List<Dept> GetDepts()

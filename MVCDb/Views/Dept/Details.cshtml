@@ -1,0 +1,8 @@
+﻿@model MVCDb.Models.Dept
+<h1>Details of Departments @Model.Name</h1>
+<hr />
+<p>@Html.DisplayNameFor(d => d.Id):@Html.DisplayFor(d => d.Id)</p>
+<p>@Html.DisplayNameFor(d => d.Location):@Html.DisplayFor(d => d.Location)</p>
+<hr />
+<br /><br /><br />
+@Html.ActionLink("Back to List", "List")
