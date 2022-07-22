@@ -14,7 +14,15 @@ namespace MVCDb.Models
 
         public void AddDept(Dept dept)
         {
-            throw new NotImplementedException();
+            context.Depts.Add(dept);
+            context.SaveChanges();
+        }
+
+        public void DeleteDept(int id)
+        {
+            Dept dept = context.Depts.Find(id);
+            context.Remove(dept);
+            context.SaveChanges();
         }
 
         public void DeleteDept(Dept dept)
@@ -24,7 +32,10 @@ namespace MVCDb.Models
 
         public void EditDept(Dept dept)
         {
-            throw new NotImplementedException();
+            Dept olddetpt = context.Depts.Find(dept.Id);
+            olddetpt.Name = dept.Name;
+            olddetpt.Location = dept.Location;
+            context.SaveChanges();
         }
 
         public Dept Find(int id)

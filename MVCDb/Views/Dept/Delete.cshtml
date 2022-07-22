@@ -1,0 +1,16 @@
+﻿@model Dept 
+<hr />
+<h1>Delete Department</h1> 
+<p>
+    <label asp-for="Id"></label>:<input type="text" asp-for="Id" readonly />
+</p>
+<p>
+    <label asp-for="Location"></label>:<input type="text" asp-for="Location" readonly />
+</p>
+<hr />
+<form  method="post">
+    <input type="submit" value="Are You Sure ?" style="background-color:red;height:100px;font-size:xx-large"/>
+</form>
+<br />
+<br />
+@Html.ActionLink("Back To List", "List")

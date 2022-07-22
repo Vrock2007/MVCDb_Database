@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Emp>
+
+<a asp-controller="Emp" asp-action="Create">Add Employee</a>
+
+<hr />
+<h1>Employee Listing</h1>
+<br />
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Birthdate</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var data in Model)
+            {
+            <tr>
+                <td>@data.Id</td>
+                <td>@data.Name</td>
+                <td>@data.Salary</td>
+                <td>@data.Dept.Name</td>
+                <td>@data.Dob</td>
+                <td>@data.Email</td>
+            </tr>
+            }
+    </tbody>
+</table>

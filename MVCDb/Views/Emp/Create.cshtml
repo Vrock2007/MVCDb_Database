@@ -1,0 +1,44 @@
+﻿@model Emp
+<h2>Adding New Employee</h2>
+<form method="post">
+    <p>
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" />
+        <span asp-validation-for="Name" style="color:red"></span>
+    </p>
+    <p>
+        <label asp-for="Salary"></label>
+        <input type="text" asp-for="Salary" />
+        <span asp-validation-for="Salary" style="color:red"></span>
+    </p>
+    <p>
+        <label asp-for="Dob"></label>
+        <input type="Date" asp-for="Dob" />
+    </p>
+    <p>
+        <label>Select Department</label>
+        <select asp-for="Deptid" asp-items="ViewBag.Deptid">
+            <option value="">Choose Department</option>
+        </select>
+    </p>
+    <p>
+        <label asp-for="Email"></label>
+        <input type="text" asp-for="Email" />
+        <span asp-validation-for="Email" style="color:red"></span>
+    </p>
+    <p>
+        <input type="submit" value="Save" style="background-color:palegreen" />
+    </p>
+    <br />
+    <br />
+    <br />
+    <div asp-validation-summary="All" style="color:palevioletred"></div>
+</form>
+<br />
+<br />
+<br />
+@Html.ActionLink("Back to List", "List")
+
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery-validate/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
